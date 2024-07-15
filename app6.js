@@ -20,7 +20,7 @@ app.get("/db", (req, res) => {
             if( error ) {
                 res.render('show', {mes:"エラーです"});
             }
-            res.render('select', {data:row});
+            res.render('db', {data:row});
         })
     })
 })
