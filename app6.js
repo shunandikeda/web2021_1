@@ -16,7 +16,7 @@ app.get("/", (req, res) => {
 
 app.get("/db", (req, res) => {
     db.serialize( () => {
-        db.all("select id, 都道府県, 人口,  from example;", (error, row) => {
+        db.all("select id, 都道府県, 人口,　大学  from example　where id=" + req.params.id +";", (error, row) => {
             if( error ) {
                 res.render('show', {mes:"エラーです"});
             }
